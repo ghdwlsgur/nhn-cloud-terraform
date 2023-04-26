@@ -18,7 +18,7 @@ data "openstack_networking_secgroup_v2" "sg" {
 // 개인 이미지 
 data "openstack_images_image_v2" "grafana" {
   name        = "grafana.speedycdn.net" // 이미지 이름    
-  owner       = var.provider_openstack.tenant_id
+  owner       = data.aws_ssm_parameter.tenant_id.value
   most_recent = true
 }
 
