@@ -1,5 +1,5 @@
 resource "openstack_networking_port_v2" "nic" {
-  count      = 3
+  count      = var.machine_count
   network_id = data.openstack_networking_network_v2.vpc.id
 
   fixed_ip {
@@ -12,8 +12,7 @@ resource "openstack_networking_port_v2" "nic" {
 }
 
 resource "openstack_compute_instance_v2" "vm" {
-
-  count             = "3"
+  count             = var.machine_count
   name              = var.machines["node${count.index + 1}"]["name"]
   availability_zone = var.machines["node${count.index + 1}"]["availability_zone"]
   flavor_name       = var.machines["node${count.index + 1}"]["flavor_name"]
