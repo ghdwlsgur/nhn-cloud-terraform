@@ -76,12 +76,16 @@ resource "openstack_lb_monitor_v2" "tf_monitor_01" {
   admin_state_up = true
 }
 
-# resource "openstack_lb_member_v2" "tf_member_01" {
-#   pool_id        = openstack_lb_member_v2.tf_pool_01.id
-#   subnet_id      = data.openstack_networking_subnet_v2.subnet.id
-#   address        = openstack_compute_instance_v2.vm[0].access_ip_v4
-#   protocol_port  = 8080
-#   weight         = 4
-#   admin_state_up = true
-# }
+// 로드 밸런서 인스턴스 연결 추가
+resource "openstack_lb_member_v2" "tf_member_01" {
+  pool_id   = openstack_lb_pool_v2.tf_pool_01.id
+  subnet_id = data.openstack_networking_subnet_v2.subnet.id
+
+
+  // 로드밸런서에서 트래픽을 수신할 인스턴스의 IP 주소
+  address        = openstack_compute_instance_v2.vm["server-1"].access_ip_v4
+  protocol_port  = 8080 // 트래픽을 수신할 인스턴스의 포트 
+  weight         = 4    // 풀에서 받아야 하는 트래픽의 가중치, 높을수록 트래픽을 많이 받음
+  admin_state_up = true
+}
 
