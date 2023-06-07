@@ -1,0 +1,1643 @@
+{
+  "version": 4,
+  "terraform_version": "1.4.6",
+  "serial": 366,
+  "lineage": "374b0a26-b21b-d9f6-ac4e-27e8946f2dec",
+  "outputs": {
+    "floating_ip": {
+      "value": {
+        "web-server-1": "133.186.201.113",
+        "web-server-2": "133.186.203.28",
+        "web-server-3": "133.186.201.36",
+        "web-server-4": "133.186.201.30"
+      },
+      "type": [
+        "object",
+        {
+          "web-server-1": "string",
+          "web-server-2": "string",
+          "web-server-3": "string",
+          "web-server-4": "string"
+        }
+      ]
+    }
+  },
+  "resources": [
+    {
+      "mode": "data",
+      "type": "aws_ssm_parameter",
+      "name": "password",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ssm:ap-northeast-2:420578220663:parameter/nhn-terraform/speedy/password",
+            "id": "/nhn-terraform/speedy/password",
+            "name": "/nhn-terraform/speedy/password",
+            "type": "SecureString",
+            "value": "speedy1234",
+            "version": 1,
+            "with_decryption": true
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_ssm_parameter",
+      "name": "tenant_id",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ssm:ap-northeast-2:420578220663:parameter/nhn-terraform/speedy/tenant_id",
+            "id": "/nhn-terraform/speedy/tenant_id",
+            "name": "/nhn-terraform/speedy/tenant_id",
+            "type": "String",
+            "value": "2c6c812dc381420e83d8f821c119a61d",
+            "version": 1,
+            "with_decryption": true
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_ssm_parameter",
+      "name": "user_name",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ssm:ap-northeast-2:420578220663:parameter/nhn-terraform/speedy/user_name",
+            "id": "/nhn-terraform/speedy/user_name",
+            "name": "/nhn-terraform/speedy/user_name",
+            "type": "String",
+            "value": "speedykorea@speedykorea.com",
+            "version": 1,
+            "with_decryption": true
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "http",
+      "name": "myip",
+      "provider": "provider[\"registry.terraform.io/hashicorp/http\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "body": "116.44.112.41\n",
+            "ca_cert_pem": null,
+            "id": "http://ipv4.icanhazip.com",
+            "insecure": null,
+            "method": "GET",
+            "request_body": null,
+            "request_headers": null,
+            "request_timeout_ms": null,
+            "response_body": "116.44.112.41\n",
+            "response_headers": {
+              "Access-Control-Allow-Methods": "GET",
+              "Access-Control-Allow-Origin": "*",
+              "Alt-Svc": "h3=\":443\"; ma=86400",
+              "Cf-Ray": "7d371b2d7c78c099-ICN",
+              "Connection": "keep-alive",
+              "Content-Length": "14",
+              "Content-Type": "text/plain",
+              "Date": "Wed, 07 Jun 2023 07:15:50 GMT",
+              "Server": "cloudflare",
+              "Set-Cookie": "__cf_bm=r2r_k1YZ1s8pZTPlIL1QHnw48cwryVcfc3vSlpyt3cE-1686122150-0-AejczJZPIwGclzeH1C5wHJNKsfc0GwJlFCaWh0QsPDLDE32qSU57EEvLHu6sSs6F0hky+iQagEsvvCVuyCjKur4=; path=/; expires=Wed, 07-Jun-23 07:45:50 GMT; domain=.icanhazip.com; HttpOnly; SameSite=None",
+              "Vary": "Accept-Encoding"
+            },
+            "retry": null,
+            "status_code": 200,
+            "url": "http://ipv4.icanhazip.com"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "openstack_images_image_v2",
+      "name": "CentOS_7_9",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "checksum": "bdcb8849f0f856d551b4e037728a1d74",
+            "container_format": "bare",
+            "created_at": "2023-05-23T08:48:41Z",
+            "disk_format": "qcow2",
+            "file": "/v2/images/cf436e95-d8b1-4210-acde-a7193704c6a0/file",
+            "hidden": false,
+            "id": "cf436e95-d8b1-4210-acde-a7193704c6a0",
+            "member_status": null,
+            "metadata": {},
+            "min_disk_gb": 20,
+            "min_ram_mb": 0,
+            "most_recent": true,
+            "name": "CentOS 7.9 (2023.05.25)",
+            "owner": "c289b99209ca4e189095cdecebbd092d",
+            "properties": null,
+            "protected": true,
+            "region": "KR2",
+            "schema": "/v2/schemas/image",
+            "size_bytes": 2292776960,
+            "size_max": null,
+            "size_min": null,
+            "sort_direction": "asc",
+            "sort_key": "name",
+            "tag": "_AVAILABLE_",
+            "tags": [
+              "BASE"
+            ],
+            "updated_at": "2023-05-24T20:20:09Z",
+            "visibility": "public"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "openstack_networking_network_v2",
+      "name": "vpc",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": "true",
+            "all_tags": [],
+            "availability_zone_hints": [],
+            "description": "",
+            "dns_domain": "",
+            "external": false,
+            "id": "130a321c-cf34-423e-816f-b5c28f2043bc",
+            "matching_subnet_cidr": null,
+            "mtu": 1450,
+            "name": "Default Network",
+            "network_id": null,
+            "region": "KR2",
+            "shared": "false",
+            "status": null,
+            "subnets": [
+              "143b2b69-76ba-4420-9512-8dcb70a32e7c"
+            ],
+            "tags": null,
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "transparent_vlan": false
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "openstack_networking_subnet_v2",
+      "name": "subnet",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "all_tags": [],
+            "allocation_pools": [
+              {
+                "end": "192.168.0.254",
+                "start": "192.168.0.2"
+              }
+            ],
+            "cidr": "192.168.0.0/24",
+            "description": "",
+            "dhcp_disabled": null,
+            "dhcp_enabled": null,
+            "dns_nameservers": [],
+            "enable_dhcp": true,
+            "gateway_ip": "192.168.0.1",
+            "host_routes": [],
+            "id": "143b2b69-76ba-4420-9512-8dcb70a32e7c",
+            "ip_version": 4,
+            "ipv6_address_mode": "",
+            "ipv6_ra_mode": "",
+            "name": "Default Network",
+            "network_id": "130a321c-cf34-423e-816f-b5c28f2043bc",
+            "region": "KR2",
+            "subnet_id": null,
+            "subnetpool_id": "",
+            "tags": null,
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "template_file",
+      "name": "cloudinit-web",
+      "provider": "provider[\"registry.terraform.io/hashicorp/template\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "filename": null,
+            "id": "bb67cdf3b3df1ee8a4865fa3dad35081e6f0dac72e11038d02dd3aa4d459fb34",
+            "rendered": "#!/bin/bash\n\nsudo su -\nyum update -y\n\n#=========================================== Time\nyum install chrony nginx -y \necho \"server kr.pool.ntp.org\" \u003e\u003e /etc/chrony.conf\necho \"server time.bora.net\" \u003e\u003e /etc/chrony.conf\n\nsystemctl restart chronyd\nsystemctl enable chronyd\n\nsystemctl restart nginx\nsystemctl enable nginx \n\nln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime\nsed -i 's/^TMOUT=900$/TMOUT=7200/' /etc/profile\n\necho \"이 홈페이지 아이피는 $(curl 169.254.169.254/latest/meta-data/public-ipv4) 입니다.\" \u003e /usr/share/nginx/html/index.html\n#=========================================== Create Account\nuseradd demo \necho 'demo:demo#@1!' | sudo chpasswd\nusermod -aG wheel demo\necho \"demo     ALL=(ALL)          NOPASSWD:ALL\" \u003e\u003e /etc/sudoers\necho \"create demo user complete!\" \u003e /home/demo/hello.txt\n\n#=========================================== Port \nsed -i 's/^PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config\nsed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config\nsed -i 's/^\\#Port 22/Port 8022/' /etc/ssh/sshd_config\necho \"port setup 8022\" \u003e\u003e /home/demo/hello.txt\n\n#=========================================== delete Root Account\nsudo userdel -f centos\nsystemctl restart sshd\n\n#=========================================== mount \nmkdir /nas\necho \"192.168.0.60:/NAS /nas nfs defaults,nodev,noatime,nofail 1 2\" \u003e\u003e /etc/fstab\nmount -a \necho \"/nas mount complete!\" \u003e\u003e /home/demo/hello.txt",
+            "template": "#!/bin/bash\n\nsudo su -\nyum update -y\n\n#=========================================== Time\nyum install chrony nginx -y \necho \"server kr.pool.ntp.org\" \u003e\u003e /etc/chrony.conf\necho \"server time.bora.net\" \u003e\u003e /etc/chrony.conf\n\nsystemctl restart chronyd\nsystemctl enable chronyd\n\nsystemctl restart nginx\nsystemctl enable nginx \n\nln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime\nsed -i 's/^TMOUT=900$/TMOUT=7200/' /etc/profile\n\necho \"이 홈페이지 아이피는 $(curl 169.254.169.254/latest/meta-data/public-ipv4) 입니다.\" \u003e /usr/share/nginx/html/index.html\n#=========================================== Create Account\nuseradd demo \necho 'demo:demo#@1!' | sudo chpasswd\nusermod -aG wheel demo\necho \"demo     ALL=(ALL)          NOPASSWD:ALL\" \u003e\u003e /etc/sudoers\necho \"create demo user complete!\" \u003e /home/demo/hello.txt\n\n#=========================================== Port \nsed -i 's/^PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config\nsed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config\nsed -i 's/^\\#Port 22/Port 8022/' /etc/ssh/sshd_config\necho \"port setup 8022\" \u003e\u003e /home/demo/hello.txt\n\n#=========================================== delete Root Account\nsudo userdel -f centos\nsystemctl restart sshd\n\n#=========================================== mount \nmkdir /nas\necho \"${nfs_connect_info} /nas nfs defaults,nodev,noatime,nofail 1 2\" \u003e\u003e /etc/fstab\nmount -a \necho \"/nas mount complete!\" \u003e\u003e /home/demo/hello.txt",
+            "vars": {
+              "nfs_connect_info": "192.168.0.60:/NAS"
+            }
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_compute_floatingip_associate_v2",
+      "name": "fip_associate",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "index_key": "web-server-1",
+          "schema_version": 0,
+          "attributes": {
+            "fixed_ip": "",
+            "floating_ip": "133.186.201.113",
+            "id": "133.186.201.113/e6200ea6-b059-40cf-b6b5-991aad73dc6e/",
+            "instance_id": "e6200ea6-b059-40cf-b6b5-991aad73dc6e",
+            "region": "KR2",
+            "timeouts": null,
+            "wait_until_associated": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_compute_floatingip_v2.fip",
+            "openstack_compute_instance_v2.vm",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-2",
+          "schema_version": 0,
+          "attributes": {
+            "fixed_ip": "",
+            "floating_ip": "133.186.203.28",
+            "id": "133.186.203.28/d177ec53-e59f-4712-af11-c21b729d28a9/",
+            "instance_id": "d177ec53-e59f-4712-af11-c21b729d28a9",
+            "region": "KR2",
+            "timeouts": null,
+            "wait_until_associated": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_compute_floatingip_v2.fip",
+            "openstack_compute_instance_v2.vm",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-3",
+          "schema_version": 0,
+          "attributes": {
+            "fixed_ip": "",
+            "floating_ip": "133.186.201.36",
+            "id": "133.186.201.36/d9b5a8b8-0102-42a1-9f30-7558b75377a0/",
+            "instance_id": "d9b5a8b8-0102-42a1-9f30-7558b75377a0",
+            "region": "KR2",
+            "timeouts": null,
+            "wait_until_associated": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_compute_floatingip_v2.fip",
+            "openstack_compute_instance_v2.vm",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-4",
+          "schema_version": 0,
+          "attributes": {
+            "fixed_ip": "",
+            "floating_ip": "133.186.201.30",
+            "id": "133.186.201.30/6e591ed4-0d88-4a7b-a70d-c049c181cdb7/",
+            "instance_id": "6e591ed4-0d88-4a7b-a70d-c049c181cdb7",
+            "region": "KR2",
+            "timeouts": null,
+            "wait_until_associated": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_compute_floatingip_v2.fip",
+            "openstack_compute_instance_v2.vm",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_compute_floatingip_v2",
+      "name": "fip",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "index_key": "web-server-1",
+          "schema_version": 0,
+          "attributes": {
+            "address": "133.186.201.113",
+            "fixed_ip": "",
+            "id": "6799ace5-59c4-4895-8efe-e3e0ceec9570",
+            "instance_id": "",
+            "pool": "Public Network",
+            "region": "KR2"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name"
+          ]
+        },
+        {
+          "index_key": "web-server-2",
+          "schema_version": 0,
+          "attributes": {
+            "address": "133.186.203.28",
+            "fixed_ip": "",
+            "id": "c29541e7-f12c-42f1-bf92-3a0ee0369663",
+            "instance_id": "",
+            "pool": "Public Network",
+            "region": "KR2"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name"
+          ]
+        },
+        {
+          "index_key": "web-server-3",
+          "schema_version": 0,
+          "attributes": {
+            "address": "133.186.201.36",
+            "fixed_ip": "",
+            "id": "06a52255-ff94-420d-81fc-4c6cc4ac241d",
+            "instance_id": "",
+            "pool": "Public Network",
+            "region": "KR2"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name"
+          ]
+        },
+        {
+          "index_key": "web-server-4",
+          "schema_version": 0,
+          "attributes": {
+            "address": "133.186.201.30",
+            "fixed_ip": "",
+            "id": "3b768752-8d85-42f1-805f-e4cf37d9a86b",
+            "instance_id": "",
+            "pool": "Public Network",
+            "region": "KR2"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_compute_floatingip_v2",
+      "name": "lb_fip",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": "133.186.201.42",
+            "fixed_ip": "",
+            "id": "3725007e-3ce5-45e3-9c5e-b3237bc76d6e",
+            "instance_id": "",
+            "pool": "Public Network",
+            "region": "KR2"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_compute_instance_v2",
+      "name": "vm",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "index_key": "web-server-1",
+          "schema_version": 0,
+          "attributes": {
+            "access_ip_v4": "192.168.0.21",
+            "access_ip_v6": "",
+            "admin_pass": null,
+            "all_metadata": {
+              "description": "CentOS 7.9 (2023.05.25)",
+              "hypervisor_type": "qemu",
+              "image_name": "CentOS 7.9 (2023.05.25)",
+              "login_username": "centos",
+              "monitoring_agent": "sysmon",
+              "os_architecture": "amd64",
+              "os_distro": "CentOS",
+              "os_type": "linux",
+              "os_version": "7.9",
+              "project_domain": "NORMAL",
+              "tc_env": "sysmon",
+              "volume_size": "50"
+            },
+            "all_tags": [],
+            "availability_zone": "kr2-pub-a",
+            "availability_zone_hints": null,
+            "block_device": [
+              {
+                "boot_index": 0,
+                "delete_on_termination": true,
+                "destination_type": "volume",
+                "device_type": "",
+                "disk_bus": "",
+                "guest_format": "",
+                "source_type": "image",
+                "uuid": "cf436e95-d8b1-4210-acde-a7193704c6a0",
+                "volume_size": 50,
+                "volume_type": "General SSD"
+              },
+              {
+                "boot_index": 1,
+                "delete_on_termination": true,
+                "destination_type": "volume",
+                "device_type": "",
+                "disk_bus": "",
+                "guest_format": "",
+                "source_type": "blank",
+                "uuid": "",
+                "volume_size": 100,
+                "volume_type": "General HDD"
+              }
+            ],
+            "config_drive": null,
+            "flavor_id": "a0fef4dc-bd7f-4906-b590-10e75b87546e",
+            "flavor_name": "m2.c2m4",
+            "floating_ip": null,
+            "force_delete": false,
+            "id": "e6200ea6-b059-40cf-b6b5-991aad73dc6e",
+            "image_id": "Attempt to boot from volume - no image supplied",
+            "image_name": null,
+            "key_pair": "hongjinhyeok",
+            "metadata": null,
+            "name": "DEMO-WEB-01",
+            "network": [
+              {
+                "access_network": false,
+                "fixed_ip_v4": "192.168.0.21",
+                "fixed_ip_v6": "",
+                "floating_ip": "",
+                "mac": "fa:16:3e:82:2b:0f",
+                "name": "Default Network",
+                "port": "efd8eb5b-a8f5-4dac-8460-94e069e31bad",
+                "uuid": "130a321c-cf34-423e-816f-b5c28f2043bc"
+              }
+            ],
+            "network_mode": null,
+            "personality": [],
+            "power_state": "active",
+            "region": "KR2",
+            "scheduler_hints": [],
+            "security_groups": [
+              "web-sg"
+            ],
+            "stop_before_destroy": false,
+            "tags": null,
+            "timeouts": null,
+            "user_data": "b8c5e6afd1ae15c59a6976c2f8efc9ab5a69105d",
+            "vendor_options": [],
+            "volume": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-2",
+          "schema_version": 0,
+          "attributes": {
+            "access_ip_v4": "192.168.0.22",
+            "access_ip_v6": "",
+            "admin_pass": null,
+            "all_metadata": {
+              "description": "CentOS 7.9 (2023.05.25)",
+              "hypervisor_type": "qemu",
+              "image_name": "CentOS 7.9 (2023.05.25)",
+              "login_username": "centos",
+              "monitoring_agent": "sysmon",
+              "os_architecture": "amd64",
+              "os_distro": "CentOS",
+              "os_type": "linux",
+              "os_version": "7.9",
+              "project_domain": "NORMAL",
+              "tc_env": "sysmon",
+              "volume_size": "50"
+            },
+            "all_tags": [],
+            "availability_zone": "kr2-pub-b",
+            "availability_zone_hints": null,
+            "block_device": [
+              {
+                "boot_index": 0,
+                "delete_on_termination": true,
+                "destination_type": "volume",
+                "device_type": "",
+                "disk_bus": "",
+                "guest_format": "",
+                "source_type": "image",
+                "uuid": "cf436e95-d8b1-4210-acde-a7193704c6a0",
+                "volume_size": 50,
+                "volume_type": "General SSD"
+              },
+              {
+                "boot_index": 1,
+                "delete_on_termination": true,
+                "destination_type": "volume",
+                "device_type": "",
+                "disk_bus": "",
+                "guest_format": "",
+                "source_type": "blank",
+                "uuid": "",
+                "volume_size": 100,
+                "volume_type": "General HDD"
+              }
+            ],
+            "config_drive": null,
+            "flavor_id": "a0fef4dc-bd7f-4906-b590-10e75b87546e",
+            "flavor_name": "m2.c2m4",
+            "floating_ip": null,
+            "force_delete": false,
+            "id": "d177ec53-e59f-4712-af11-c21b729d28a9",
+            "image_id": "Attempt to boot from volume - no image supplied",
+            "image_name": null,
+            "key_pair": "hongjinhyeok",
+            "metadata": null,
+            "name": "DEMO-WEB-02",
+            "network": [
+              {
+                "access_network": false,
+                "fixed_ip_v4": "192.168.0.22",
+                "fixed_ip_v6": "",
+                "floating_ip": "",
+                "mac": "fa:16:3e:13:7b:bc",
+                "name": "Default Network",
+                "port": "45af7050-fdda-4a35-802b-7fad367a4ad3",
+                "uuid": "130a321c-cf34-423e-816f-b5c28f2043bc"
+              }
+            ],
+            "network_mode": null,
+            "personality": [],
+            "power_state": "active",
+            "region": "KR2",
+            "scheduler_hints": [],
+            "security_groups": [
+              "web-sg"
+            ],
+            "stop_before_destroy": false,
+            "tags": null,
+            "timeouts": null,
+            "user_data": "b8c5e6afd1ae15c59a6976c2f8efc9ab5a69105d",
+            "vendor_options": [],
+            "volume": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-3",
+          "schema_version": 0,
+          "attributes": {
+            "access_ip_v4": "192.168.0.23",
+            "access_ip_v6": "",
+            "admin_pass": null,
+            "all_metadata": {
+              "description": "CentOS 7.9 (2023.05.25)",
+              "hypervisor_type": "qemu",
+              "image_name": "CentOS 7.9 (2023.05.25)",
+              "login_username": "centos",
+              "monitoring_agent": "sysmon",
+              "os_architecture": "amd64",
+              "os_distro": "CentOS",
+              "os_type": "linux",
+              "os_version": "7.9",
+              "project_domain": "NORMAL",
+              "tc_env": "sysmon",
+              "volume_size": "50"
+            },
+            "all_tags": [],
+            "availability_zone": "kr2-pub-a",
+            "availability_zone_hints": null,
+            "block_device": [
+              {
+                "boot_index": 0,
+                "delete_on_termination": true,
+                "destination_type": "volume",
+                "device_type": "",
+                "disk_bus": "",
+                "guest_format": "",
+                "source_type": "image",
+                "uuid": "cf436e95-d8b1-4210-acde-a7193704c6a0",
+                "volume_size": 50,
+                "volume_type": "General SSD"
+              },
+              {
+                "boot_index": 1,
+                "delete_on_termination": true,
+                "destination_type": "volume",
+                "device_type": "",
+                "disk_bus": "",
+                "guest_format": "",
+                "source_type": "blank",
+                "uuid": "",
+                "volume_size": 100,
+                "volume_type": "General HDD"
+              }
+            ],
+            "config_drive": null,
+            "flavor_id": "9137c1e5-86d5-4684-abed-321d96f5e383",
+            "flavor_name": "m2.c4m8",
+            "floating_ip": null,
+            "force_delete": false,
+            "id": "d9b5a8b8-0102-42a1-9f30-7558b75377a0",
+            "image_id": "Attempt to boot from volume - no image supplied",
+            "image_name": null,
+            "key_pair": "hongjinhyeok",
+            "metadata": null,
+            "name": "DEMO-WEB-03",
+            "network": [
+              {
+                "access_network": false,
+                "fixed_ip_v4": "192.168.0.23",
+                "fixed_ip_v6": "",
+                "floating_ip": "",
+                "mac": "fa:16:3e:4e:bf:a6",
+                "name": "Default Network",
+                "port": "5923f599-9c59-4e6f-a231-de1016beab69",
+                "uuid": "130a321c-cf34-423e-816f-b5c28f2043bc"
+              }
+            ],
+            "network_mode": null,
+            "personality": [],
+            "power_state": "active",
+            "region": "KR2",
+            "scheduler_hints": [],
+            "security_groups": [
+              "web-sg"
+            ],
+            "stop_before_destroy": false,
+            "tags": null,
+            "timeouts": null,
+            "user_data": "b8c5e6afd1ae15c59a6976c2f8efc9ab5a69105d",
+            "vendor_options": [],
+            "volume": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-4",
+          "schema_version": 0,
+          "attributes": {
+            "access_ip_v4": "192.168.0.24",
+            "access_ip_v6": "",
+            "admin_pass": null,
+            "all_metadata": {
+              "description": "CentOS 7.9 (2023.05.25)",
+              "hypervisor_type": "qemu",
+              "image_name": "CentOS 7.9 (2023.05.25)",
+              "login_username": "centos",
+              "monitoring_agent": "sysmon",
+              "os_architecture": "amd64",
+              "os_distro": "CentOS",
+              "os_type": "linux",
+              "os_version": "7.9",
+              "project_domain": "NORMAL",
+              "tc_env": "sysmon",
+              "volume_size": "50"
+            },
+            "all_tags": [],
+            "availability_zone": "kr2-pub-b",
+            "availability_zone_hints": null,
+            "block_device": [
+              {
+                "boot_index": 0,
+                "delete_on_termination": true,
+                "destination_type": "volume",
+                "device_type": "",
+                "disk_bus": "",
+                "guest_format": "",
+                "source_type": "image",
+                "uuid": "cf436e95-d8b1-4210-acde-a7193704c6a0",
+                "volume_size": 50,
+                "volume_type": "General SSD"
+              },
+              {
+                "boot_index": 1,
+                "delete_on_termination": true,
+                "destination_type": "volume",
+                "device_type": "",
+                "disk_bus": "",
+                "guest_format": "",
+                "source_type": "blank",
+                "uuid": "",
+                "volume_size": 100,
+                "volume_type": "General HDD"
+              }
+            ],
+            "config_drive": null,
+            "flavor_id": "9137c1e5-86d5-4684-abed-321d96f5e383",
+            "flavor_name": "m2.c4m8",
+            "floating_ip": null,
+            "force_delete": false,
+            "id": "6e591ed4-0d88-4a7b-a70d-c049c181cdb7",
+            "image_id": "Attempt to boot from volume - no image supplied",
+            "image_name": null,
+            "key_pair": "hongjinhyeok",
+            "metadata": null,
+            "name": "DEMO-WEB-04",
+            "network": [
+              {
+                "access_network": false,
+                "fixed_ip_v4": "192.168.0.24",
+                "fixed_ip_v6": "",
+                "floating_ip": "",
+                "mac": "fa:16:3e:a5:76:71",
+                "name": "Default Network",
+                "port": "e57fee95-f326-44cc-b4c8-bc59ea592e8d",
+                "uuid": "130a321c-cf34-423e-816f-b5c28f2043bc"
+              }
+            ],
+            "network_mode": null,
+            "personality": [],
+            "power_state": "active",
+            "region": "KR2",
+            "scheduler_hints": [],
+            "security_groups": [
+              "web-sg"
+            ],
+            "stop_before_destroy": false,
+            "tags": null,
+            "timeouts": null,
+            "user_data": "b8c5e6afd1ae15c59a6976c2f8efc9ab5a69105d",
+            "vendor_options": [],
+            "volume": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_lb_listener_v2",
+      "name": "listener_http",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": true,
+            "allowed_cidrs": null,
+            "connection_limit": 60000,
+            "default_pool_id": "",
+            "default_tls_container_ref": "",
+            "description": "CONNECT HTTP",
+            "id": "9e0d9109-686c-4b05-b35b-274370b8b3fc",
+            "insert_headers": null,
+            "loadbalancer_id": "86f7ef3e-60fb-4776-a388-8477c90f4b8d",
+            "name": "LB_Listen_HTTP",
+            "protocol": "HTTP",
+            "protocol_port": 80,
+            "region": "KR2",
+            "sni_container_refs": null,
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeout_client_data": 5400,
+            "timeout_member_connect": 5000,
+            "timeout_member_data": 5000,
+            "timeout_tcp_inspect": 5000,
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_subnet_v2.subnet",
+            "openstack_lb_loadbalancer_v2.loadbalancer"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_lb_loadbalancer_v2",
+      "name": "loadbalancer",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": true,
+            "availability_zone": null,
+            "description": "created by terraform.",
+            "flavor_id": "",
+            "id": "86f7ef3e-60fb-4776-a388-8477c90f4b8d",
+            "loadbalancer_provider": "haproxy",
+            "name": "DemoLoadBalancer",
+            "region": "KR2",
+            "security_group_ids": [
+              "958024a6-97fa-4a9f-a7f0-de8a6fd9f9a8"
+            ],
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "vip_address": "192.168.0.10",
+            "vip_network_id": null,
+            "vip_port_id": "63befda9-4b56-4436-adb9-618cca970980",
+            "vip_subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_subnet_v2.subnet"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_lb_member_v2",
+      "name": "lb_instance_http",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "index_key": "web-server-1",
+          "schema_version": 0,
+          "attributes": {
+            "address": "192.168.0.21",
+            "admin_state_up": true,
+            "id": "a490fdc9-6f8e-45b1-bd8e-bbe3d26bbf6d",
+            "name": "",
+            "pool_id": "99d86268-1d18-482a-81b9-7b27e6441441",
+            "protocol_port": 80,
+            "region": "KR2",
+            "subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "weight": 4
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_compute_instance_v2.vm",
+            "openstack_lb_listener_v2.listener_http",
+            "openstack_lb_loadbalancer_v2.loadbalancer",
+            "openstack_lb_pool_v2.lb_pool_http",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-2",
+          "schema_version": 0,
+          "attributes": {
+            "address": "192.168.0.22",
+            "admin_state_up": true,
+            "id": "408282ef-38e5-4dae-aaa0-efc6dd20bf2a",
+            "name": "",
+            "pool_id": "99d86268-1d18-482a-81b9-7b27e6441441",
+            "protocol_port": 80,
+            "region": "KR2",
+            "subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "weight": 4
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_compute_instance_v2.vm",
+            "openstack_lb_listener_v2.listener_http",
+            "openstack_lb_loadbalancer_v2.loadbalancer",
+            "openstack_lb_pool_v2.lb_pool_http",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-3",
+          "schema_version": 0,
+          "attributes": {
+            "address": "192.168.0.23",
+            "admin_state_up": true,
+            "id": "a1f8add1-2274-4b95-a4c6-6536d65f2de6",
+            "name": "",
+            "pool_id": "99d86268-1d18-482a-81b9-7b27e6441441",
+            "protocol_port": 80,
+            "region": "KR2",
+            "subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "weight": 4
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_compute_instance_v2.vm",
+            "openstack_lb_listener_v2.listener_http",
+            "openstack_lb_loadbalancer_v2.loadbalancer",
+            "openstack_lb_pool_v2.lb_pool_http",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-4",
+          "schema_version": 0,
+          "attributes": {
+            "address": "192.168.0.24",
+            "admin_state_up": true,
+            "id": "651af676-a95a-4a3f-9771-147748852433",
+            "name": "",
+            "pool_id": "99d86268-1d18-482a-81b9-7b27e6441441",
+            "protocol_port": 80,
+            "region": "KR2",
+            "subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "weight": 4
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_images_image_v2.CentOS_7_9",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "data.template_file.cloudinit-web",
+            "openstack_compute_instance_v2.vm",
+            "openstack_lb_listener_v2.listener_http",
+            "openstack_lb_loadbalancer_v2.loadbalancer",
+            "openstack_lb_pool_v2.lb_pool_http",
+            "openstack_networking_port_v2.nic",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_lb_monitor_v2",
+      "name": "lb_monitor_http",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": true,
+            "delay": 30,
+            "expected_codes": "",
+            "http_method": "",
+            "id": "eaaf8090-1a6d-419c-bd08-3ca577cb526b",
+            "max_retries": 2,
+            "max_retries_down": null,
+            "name": "LB_HTTP_Monitor",
+            "pool_id": "99d86268-1d18-482a-81b9-7b27e6441441",
+            "region": "KR2",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeout": 5,
+            "timeouts": null,
+            "type": "TCP",
+            "url_path": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_subnet_v2.subnet",
+            "openstack_lb_listener_v2.listener_http",
+            "openstack_lb_loadbalancer_v2.loadbalancer",
+            "openstack_lb_pool_v2.lb_pool_http"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_lb_pool_v2",
+      "name": "lb_pool_http",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": true,
+            "description": "craete pool by terraform.",
+            "id": "99d86268-1d18-482a-81b9-7b27e6441441",
+            "lb_method": "ROUND_ROBIN",
+            "listener_id": "9e0d9109-686c-4b05-b35b-274370b8b3fc",
+            "loadbalancer_id": null,
+            "name": "LB_HTTP_Pool",
+            "persistence": [
+              {
+                "cookie_name": "",
+                "type": ""
+              }
+            ],
+            "protocol": "HTTP",
+            "region": "KR2",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_subnet_v2.subnet",
+            "openstack_lb_listener_v2.listener_http",
+            "openstack_lb_loadbalancer_v2.loadbalancer"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_networking_port_v2",
+      "name": "nic",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "index_key": "web-server-1",
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": true,
+            "all_fixed_ips": [
+              "192.168.0.21"
+            ],
+            "all_security_group_ids": [
+              "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d"
+            ],
+            "all_tags": [],
+            "allowed_address_pairs": [],
+            "binding": [
+              {
+                "host_id": "",
+                "profile": "",
+                "vif_details": {},
+                "vif_type": "",
+                "vnic_type": "normal"
+              }
+            ],
+            "description": "",
+            "device_id": "",
+            "device_owner": "",
+            "dns_assignment": [],
+            "dns_name": "",
+            "extra_dhcp_option": [],
+            "fixed_ip": [
+              {
+                "ip_address": "192.168.0.21",
+                "subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c"
+              }
+            ],
+            "id": "efd8eb5b-a8f5-4dac-8460-94e069e31bad",
+            "mac_address": "fa:16:3e:82:2b:0f",
+            "name": "",
+            "network_id": "130a321c-cf34-423e-816f-b5c28f2043bc",
+            "no_fixed_ip": null,
+            "no_security_groups": null,
+            "port_security_enabled": true,
+            "qos_policy_id": "",
+            "region": "KR2",
+            "security_group_ids": [
+              "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d"
+            ],
+            "tags": null,
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "value_specs": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-2",
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": true,
+            "all_fixed_ips": [
+              "192.168.0.22"
+            ],
+            "all_security_group_ids": [
+              "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d"
+            ],
+            "all_tags": [],
+            "allowed_address_pairs": [],
+            "binding": [
+              {
+                "host_id": "",
+                "profile": "",
+                "vif_details": {},
+                "vif_type": "",
+                "vnic_type": "normal"
+              }
+            ],
+            "description": "",
+            "device_id": "",
+            "device_owner": "",
+            "dns_assignment": [],
+            "dns_name": "",
+            "extra_dhcp_option": [],
+            "fixed_ip": [
+              {
+                "ip_address": "192.168.0.22",
+                "subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c"
+              }
+            ],
+            "id": "45af7050-fdda-4a35-802b-7fad367a4ad3",
+            "mac_address": "fa:16:3e:13:7b:bc",
+            "name": "",
+            "network_id": "130a321c-cf34-423e-816f-b5c28f2043bc",
+            "no_fixed_ip": null,
+            "no_security_groups": null,
+            "port_security_enabled": true,
+            "qos_policy_id": "",
+            "region": "KR2",
+            "security_group_ids": [
+              "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d"
+            ],
+            "tags": null,
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "value_specs": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-3",
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": true,
+            "all_fixed_ips": [
+              "192.168.0.23"
+            ],
+            "all_security_group_ids": [
+              "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d"
+            ],
+            "all_tags": [],
+            "allowed_address_pairs": [],
+            "binding": [
+              {
+                "host_id": "",
+                "profile": "",
+                "vif_details": {},
+                "vif_type": "",
+                "vnic_type": "normal"
+              }
+            ],
+            "description": "",
+            "device_id": "",
+            "device_owner": "",
+            "dns_assignment": [],
+            "dns_name": "",
+            "extra_dhcp_option": [],
+            "fixed_ip": [
+              {
+                "ip_address": "192.168.0.23",
+                "subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c"
+              }
+            ],
+            "id": "5923f599-9c59-4e6f-a231-de1016beab69",
+            "mac_address": "fa:16:3e:4e:bf:a6",
+            "name": "",
+            "network_id": "130a321c-cf34-423e-816f-b5c28f2043bc",
+            "no_fixed_ip": null,
+            "no_security_groups": null,
+            "port_security_enabled": true,
+            "qos_policy_id": "",
+            "region": "KR2",
+            "security_group_ids": [
+              "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d"
+            ],
+            "tags": null,
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "value_specs": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        },
+        {
+          "index_key": "web-server-4",
+          "schema_version": 0,
+          "attributes": {
+            "admin_state_up": true,
+            "all_fixed_ips": [
+              "192.168.0.24"
+            ],
+            "all_security_group_ids": [
+              "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d"
+            ],
+            "all_tags": [],
+            "allowed_address_pairs": [],
+            "binding": [
+              {
+                "host_id": "",
+                "profile": "",
+                "vif_details": {},
+                "vif_type": "",
+                "vnic_type": "normal"
+              }
+            ],
+            "description": "",
+            "device_id": "",
+            "device_owner": "",
+            "dns_assignment": [],
+            "dns_name": "",
+            "extra_dhcp_option": [],
+            "fixed_ip": [
+              {
+                "ip_address": "192.168.0.24",
+                "subnet_id": "143b2b69-76ba-4420-9512-8dcb70a32e7c"
+              }
+            ],
+            "id": "e57fee95-f326-44cc-b4c8-bc59ea592e8d",
+            "mac_address": "fa:16:3e:a5:76:71",
+            "name": "",
+            "network_id": "130a321c-cf34-423e-816f-b5c28f2043bc",
+            "no_fixed_ip": null,
+            "no_security_groups": null,
+            "port_security_enabled": true,
+            "qos_policy_id": "",
+            "region": "KR2",
+            "security_group_ids": [
+              "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d"
+            ],
+            "tags": null,
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null,
+            "value_specs": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_network_v2.vpc",
+            "data.openstack_networking_subnet_v2.subnet",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_networking_secgroup_rule_v2",
+      "name": "web_security_group_rule_1",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "ALLOW 스피디 사무실",
+            "direction": "ingress",
+            "ethertype": "IPv4",
+            "id": "15b3e6d4-3997-4f5e-bd14-a3289d114375",
+            "port_range_max": 8022,
+            "port_range_min": 8022,
+            "protocol": "tcp",
+            "region": "KR2",
+            "remote_group_id": "",
+            "remote_ip_prefix": "116.44.112.41/32",
+            "security_group_id": "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.http.myip",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_networking_secgroup_rule_v2",
+      "name": "web_security_group_rule_2",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "ALLOW 스피디 사무실",
+            "direction": "ingress",
+            "ethertype": "IPv4",
+            "id": "79e93d18-18eb-45ba-8360-842f6a91adba",
+            "port_range_max": 0,
+            "port_range_min": 0,
+            "protocol": "icmp",
+            "region": "KR2",
+            "remote_group_id": "",
+            "remote_ip_prefix": "116.44.112.41/32",
+            "security_group_id": "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.http.myip",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_networking_secgroup_rule_v2",
+      "name": "web_security_group_rule_3",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "ALLOW 로드밸런서",
+            "direction": "ingress",
+            "ethertype": "IPv4",
+            "id": "9de326f6-c13c-4334-991b-2d5f932bdccd",
+            "port_range_max": 80,
+            "port_range_min": 80,
+            "protocol": "tcp",
+            "region": "KR2",
+            "remote_group_id": "",
+            "remote_ip_prefix": "192.168.0.10/32",
+            "security_group_id": "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.openstack_networking_subnet_v2.subnet",
+            "openstack_lb_loadbalancer_v2.loadbalancer",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_networking_secgroup_rule_v2",
+      "name": "web_security_group_rule_4",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "ALLOW 스피디",
+            "direction": "ingress",
+            "ethertype": "IPv4",
+            "id": "80abf548-785d-4628-8395-3d7b8462e5ef",
+            "port_range_max": 80,
+            "port_range_min": 80,
+            "protocol": "tcp",
+            "region": "KR2",
+            "remote_group_id": "",
+            "remote_ip_prefix": "116.44.112.41/32",
+            "security_group_id": "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d",
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name",
+            "data.http.myip",
+            "openstack_networking_secgroup_v2.web_security_group"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "openstack_networking_secgroup_v2",
+      "name": "web_security_group",
+      "provider": "provider[\"registry.terraform.io/terraform-provider-openstack/openstack\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "all_tags": [],
+            "delete_default_rules": null,
+            "description": "Security group for Web Server",
+            "id": "ffede8f7-234d-42fd-a9e4-8fd04ea88f6d",
+            "name": "web-sg",
+            "region": "KR2",
+            "tags": null,
+            "tenant_id": "2c6c812dc381420e83d8f821c119a61d",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.aws_ssm_parameter.password",
+            "data.aws_ssm_parameter.tenant_id",
+            "data.aws_ssm_parameter.user_name"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

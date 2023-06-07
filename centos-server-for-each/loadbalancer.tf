@@ -59,8 +59,8 @@ resource "openstack_lb_pool_v2" "tf_pool_01" {
 
 
 // 로드 밸런서 헬스모니터 생성 
-resource "openstack_lb_monitor_v2" "tf_monitor_01" {
-  name    = "tf_monitor_01"
+resource "openstack_lb_monitor_v2" "lb_monitor_01" {
+  name    = "lb_monitor_01"
   pool_id = openstack_lb_pool_v2.tf_pool_01.id
 
   // TCP, HTTP, HTTPS 
@@ -72,21 +72,51 @@ resource "openstack_lb_monitor_v2" "tf_monitor_01" {
   http_method = "GET" // 상태 확인에 사용할 HTTP 메서드 (기본값 GET)
 
   // expected_codes는 목록 (200, 201, 202)이나 범위 지정 (200-202)도 가능 
-  expected_codes = "200-202" // 정상 상태로 간주할 멤버의 HTTP(S) 응답 코드
+  expected_codes = "200" // 정상 상태로 간주할 멤버의 HTTP(S) 응답 코드
   admin_state_up = true
 }
 
 
 // 로드 밸런서 인스턴스 연결 추가
-resource "openstack_lb_member_v2" "tf_member_01" {
+resource "openstack_lb_member_v2" "lb_instance_01" {
   pool_id   = openstack_lb_pool_v2.tf_pool_01.id
   subnet_id = data.openstack_networking_subnet_v2.subnet.id
 
 
   // 로드밸런서에서 트래픽을 수신할 인스턴스의 IP 주소
   address        = openstack_compute_instance_v2.vm["server-1"].access_ip_v4
-  protocol_port  = 8080 // 트래픽을 수신할 인스턴스의 포트 
-  weight         = 4    // 풀에서 받아야 하는 트래픽의 가중치, 높을수록 트래픽을 많이 받음
+  protocol_port  = 80 // 트래픽을 수신할 인스턴스의 포트 
+  weight         = 4  // 풀에서 받아야 하는 트래픽의 가중치, 높을수록 트래픽을 많이 받음
   admin_state_up = true
 }
 
+
+resource "openstack_lb_member_v2" "lb_instance_02" {
+  pool_id   = openstack_lb_pool_v2.tf_pool_01.id
+  subnet_id = data.openstack_networking_subnet_v2.subnet.id
+
+  address        = openstack_compute_instance_v2.vm["server-2"].access_ip_v4
+  protocol_port  = 80
+  weight         = 4
+  admin_state_up = true
+}
+
+resource "openstack_lb_member_v2" "lb_instance_03" {
+  pool_id   = openstack_lb_pool_v2.tf_pool_01.id
+  subnet_id = data.openstack_networking_subnet_v2.subnet.id
+
+  address        = openstack_compute_instance_v2.vm["server-3"].access_ip_v4
+  protocol_port  = 80
+  weight         = 4
+  admin_state_up = true
+}
+
+resource "openstack_lb_member_v2" "lb_instance_04" {
+  pool_id   = openstack_lb_pool_v2.tf_pool_01.id
+  subnet_id = data.openstack_networking_subnet_v2.subnet.id
+
+  address        = openstack_compute_instance_v2.vm["server-4"].access_ip_v4
+  protocol_port  = 80
+  weight         = 4
+  admin_state_up = true
+}
