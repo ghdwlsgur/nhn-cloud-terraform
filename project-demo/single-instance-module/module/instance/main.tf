@@ -6,12 +6,12 @@ resource "openstack_compute_instance_v2" "vm" {
   key_pair          = var.key_pair
 
   block_device {
-    uuid                  = data.openstack_images_image_v2.windows.id
+    uuid                  = data.openstack_images_image_v2.os_image.id
     source_type           = "image"
     destination_type      = "volume"
     delete_on_termination = true
     boot_index            = 0
-    volume_size           = 100
+    volume_size           = 50
     volume_type           = "General SSD"
   }
 
@@ -19,7 +19,7 @@ resource "openstack_compute_instance_v2" "vm" {
     source_type           = "blank"
     destination_type      = "volume"
     boot_index            = 1
-    volume_size           = 100
+    volume_size           = 50
     volume_type           = "General HDD"
     delete_on_termination = true
   }

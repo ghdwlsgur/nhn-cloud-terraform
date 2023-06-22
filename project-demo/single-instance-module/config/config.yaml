@@ -1,0 +1,12 @@
+instance:
+  name: "Linux Master (ubuntu)"
+  image: "CentOS 7.9 (2023.05.25)"
+  availability_zone: "kr2-pub-a"
+  key_pair: "hongjinhyeok"
+  flavor_name: "m2.c2m4"
+vpc:
+  name: "Default Network"
+subnet:
+  name: "Default Network"
+nic:
+  ipv4: "192.168.0.10"
