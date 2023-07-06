@@ -22,6 +22,7 @@ module "network" {
 }
 
 module "security_group" {
-  source = "./module/security_group"
+  source               = "./module/security_group"
+  security_group_rules = local.config.security_group_rules
 }
 
