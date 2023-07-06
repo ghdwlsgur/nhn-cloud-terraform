@@ -4,4 +4,7 @@
 /**/terraform.tfstate.d/**
 **.tfstate
 **.tfstate.backup
-terraform.tfstate.**.backup
+**.backup
+.tfvars
+
+config.yaml
