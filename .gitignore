@@ -8,3 +8,5 @@
 .tfvars
 
 config.yaml
+manifest-**
+pricing.gob
